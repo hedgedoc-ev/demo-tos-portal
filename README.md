@@ -9,6 +9,5 @@ Add this middleware config
 ```toml
 [http.middlewares.demoTosAccept.forwardAuth]
     address="http://demoTosAccept:3000"
-    addAuthCookiesToResponse="demoTosAccepted"
     authRequestHeaders="Cookie"
 ```
