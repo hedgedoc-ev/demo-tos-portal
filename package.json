@@ -1,0 +1,15 @@
+{
+  "name": "demo-captive-portal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "keywords": [],
+  "author": "The HedgeDoc Developers",
+  "license": "AGPL-3.0",
+  "description": "",
+  "dependencies": {
+    "express": "4.19.2"
+  }
+}

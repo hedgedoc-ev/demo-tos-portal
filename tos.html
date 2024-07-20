@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <title>HedgeDoc Demo Instance</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Information about the demo instance">
+    <meta name="author" content="The HedgeDoc developers">
+    <link rel="preload" href="https://hedgedoc.org/fonts/lato/lato-latin-400-normal.woff2" as="font" crossorigin="">
+    <link rel="preload" href="https://hedgedoc.org/fonts/kumbh-sans/kumbh-sans-latin-400-normal.woff2" as="font"
+          crossorigin="">
+    <link rel="preload" href="https://hedgedoc.org/fonts/forkawesome/forkawesome-webfont.woff2?v=1.1.7" as="font"
+          crossorigin="">
+    <link rel="stylesheet" href="https://hedgedoc.org/scss/style.min.css" media="screen">
+    <link rel="canonical" href="https://hedgedoc.org/demo/">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hedgedoc.org/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://hedgedoc.org/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://hedgedoc.org/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://hedgedoc.org/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://hedgedoc.org/icons/safari-pinned-tab.svg%22%20color=%22#b51f08">
+    <link rel="shortcut icon" href="https://hedgedoc.org/icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="HedgeDoc">
+    <meta name="application-name" content="HedgeDoc">
+    <meta name="msapplication-TileColor" content="#b51f08">
+    <meta name="msapplication-config" content="https://hedgedoc.org/icons/browserconfig.xml">
+    <meta name="theme-color" content="#b51f08">
+</head>
+<body>
+<section class="p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://hedgedoc.org/images/banner/hedgedoc_banner_color_horizontal.svg"
+                     alt="HedgeDoc - Collaborative markdown editor" width="400px" height="100px">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-secondary section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="mb-4">Demo instance</h1>
+                <main><p>The demo instance is a publicly available instance for trying out HedgeDoc.</p>
+                    <p>
+                        <strong class="text-primary">You shouldn't rely on the demo instance for production
+                            use.</strong><br>
+                        Notes and accounts will be deleted at least daily.<br>
+                        We cannot guarantee that your notes won’t be lost because of hardware or software malfunctions.
+                        This is mainly due to the fact that this instance runs the latest unstable code from our
+                        repository.
+                    </p>
+                    <p>To make the demo instance available with low latencies in as many countries as possible, we use
+                        <a href="https://www.cloudflare.com/">Cloudflare</a>.
+                        One of the downsides is that Cloudflare intercepts all TLS traffic between your browser and the
+                        demo instance, which makes the demo unsuitable for private notes.
+                    </p>
+                    <p>
+                        We generally recommend hosting your own instance for more than testing HedgeDoc’s features.
+                    </p>
+
+                    <button class="btn btn-primary mb-2 me-2"
+                            onClick="document.cookie = 'demoTosAccepted=true;max-age=31536000'; window.location.reload()">
+                        Accept use conditions and continue to the demo
+                    </button>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
