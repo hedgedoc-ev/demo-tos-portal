@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Information about the demo instance">
     <meta name="author" content="The HedgeDoc developers">
+    <meta name="robots" content="noindex">
     <link rel="preload" href="https://hedgedoc.org/fonts/lato/lato-latin-400-normal.woff2" as="font" crossorigin="">
-    <link rel="preload" href="https://hedgedoc.org/fonts/kumbh-sans/kumbh-sans-latin-400-normal.woff2" as="font"
-          crossorigin="">
-    <link rel="preload" href="https://hedgedoc.org/fonts/forkawesome/forkawesome-webfont.woff2?v=1.1.7" as="font"
-          crossorigin="">
+    <link rel="preload" href="https://hedgedoc.org/fonts/kumbh-sans/kumbh-sans-latin-400-normal.woff2" as="font" crossorigin="">
+    <link rel="preload" href="https://hedgedoc.org/fonts/forkawesome/forkawesome-webfont.woff2?v=1.1.7" as="font" crossorigin="">
     <link rel="stylesheet" href="https://hedgedoc.org/scss/style.min.css" media="screen">
     <link rel="canonical" href="https://hedgedoc.org/demo/">
     <link rel="apple-touch-icon" sizes="180x180" href="https://hedgedoc.org/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://hedgedoc.org/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://hedgedoc.org/icons/favicon-16x16.png">
     <link rel="manifest" href="https://hedgedoc.org/icons/site.webmanifest">
-    <link rel="mask-icon" href="https://hedgedoc.org/icons/safari-pinned-tab.svg%22%20color=%22#b51f08">
+    <link rel="mask-icon" href="https://hedgedoc.org/icons/safari-pinned-tab.svg" color="#b51f08">
     <link rel="shortcut icon" href="https://hedgedoc.org/icons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="HedgeDoc">
-    <meta name="application-name" content="HedgeDoc">
+    <meta name="apple-mobile-web-app-title" content="HedgeDoc Demo">
+    <meta name="application-name" content="HedgeDoc Demo">
     <meta name="msapplication-TileColor" content="#b51f08">
     <meta name="msapplication-config" content="https://hedgedoc.org/icons/browserconfig.xml">
     <meta name="theme-color" content="#b51f08">
@@ -40,15 +39,26 @@
         <div class="row">
             <div class="col">
                 <h1 class="mb-4">Demo instance</h1>
-                <main><p>The demo instance is a publicly available instance for trying out HedgeDoc.</p>
+                <main>
+                    <h4>No production usage, daily deletion</h4>
+                    <p>The demo instance is a publicly available instance for trying out HedgeDoc.</p>
                     <p>
-                        <strong class="text-primary">You shouldn't rely on the demo instance for production
-                            use.</strong><br>
-                        Notes and accounts will be deleted at least daily.<br>
-                        We cannot guarantee that your notes won’t be lost because of hardware or software malfunctions.
-                        This is mainly due to the fact that this instance runs the latest unstable code from our
-                        repository.
+                        <strong class="text-primary">You shouldn't rely on the demo instance for production use.<br>
+                        Notes and accounts will be deleted at least daily.</strong>
                     </p>
+                    <p>We cannot guarantee that your notes won’t be lost because of hardware or software malfunctions.
+                       This is mainly due to the fact that this instance runs the latest unstable code from our repository.
+                    </p>
+                    <h4>Prohibited content</h4>
+                    <p>We may delete inappropriate content without further notice at any time.<br>
+                       The following types of content are forbidden on the demo instance:<br>
+                       <ul>
+                          <li>copyright-protected material and download pages for such material</li>
+                          <li>any kind of scam, phishing, malicious downloads, etc.</li>
+                          <li>explicit content</li>
+                       </ul>
+                    </p>
+                    <h4>Usage of Cloudflare</h4>
                     <p>To make the demo instance available with low latencies in as many countries as possible, we use
                         <a href="https://www.cloudflare.com/">Cloudflare</a>.
                         One of the downsides is that Cloudflare intercepts all TLS traffic between your browser and the
@@ -57,11 +67,24 @@
                     <p>
                         We generally recommend hosting your own instance for more than testing HedgeDoc’s features.
                     </p>
-
-                    <button class="btn btn-primary mb-2 me-2"
-                            onClick="document.cookie = 'demoTosAccepted=true;max-age=31536000'; window.location.reload()">
-                        Accept use conditions and continue to the demo
+                    <h4 class="mt-2">Where are my previous notes?</h4>
+                    <p>The old demo instance was archived and will be deleted soon.
+                       Please read <a href="https://community.hedgedoc.org/t/status-of-the-demo-instance/1634/4" target="_blank">this forum thread</a> about the reasons and note recovery.
+                    </p>
+                    <button style="display: none;" class="btn btn-primary my-2 me-2" id="acceptBtn">
+                        Accept usage conditions and continue to the demo instance
                     </button>
+                    <noscript>
+                        <p><strong>You need to enable JavaScript and reload this page to continue.</strong></p>
+                    </noscript>
+                    <script type="application/javascript">
+                        const btn = document.getElementById("acceptBtn");
+                        btn.style.display = 'block';
+                        btn.addEventListener("click", () => {
+                            document.cookie = 'demoTosAccepted=true;max-age=31536000';
+                            window.location.reload();
+                        });
+                    </script>
                 </main>
             </div>
         </div>
