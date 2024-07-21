@@ -1,10 +1,6 @@
-FROM node:lts-alpine
+FROM nginx:1.27.0
 
-RUN mkdir /app
-WORKDIR /app
-COPY . .
-RUN npm install
+COPY tos.html /usr/share/nginx/html/tos.html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE "3000/tcp"
-
-ENTRYPOINT ["node", "main.mjs"]
+EXPOSE "80/tcp"
